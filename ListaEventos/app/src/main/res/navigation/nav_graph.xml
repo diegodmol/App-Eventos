@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/EventsFragment">
+
+    <fragment
+        android:id="@+id/EventsFragment"
+        android:name="com.example.listaeventos.view.fragments.EventsFragment"
+        android:label="@string/fragment_events_label"
+        tools:layout="@layout/fragment_events">
+
+        <action
+            android:id="@+id/action_EventsFragment_to_EventDetailsFragment"
+            app:destination="@id/EventDetailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/EventDetailsFragment"
+        android:name="com.example.listaeventos.view.fragments.EventDetailsFragment"
+        android:label="@string/fragment_event_details_label"
+        tools:layout="@layout/fragment_event_details">
+
+        <argument
+            android:name="eventModel"
+            app:argType="com.example.listaeventos.service.model.EventsModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+
+    </fragment>
+</navigation>

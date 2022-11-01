@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ListaEventos</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="fragment_events_label">Lista eventos</string>
+    <string name="fragment_event_details_label">Detalhes evento</string>
+    <string name="UNEXPECTED_ERROR">Erro inesperado ocorreu. Tente novamente mais tarde.</string>
+    <string name="show_details_event">Ver detalhes</string>
+    <string name="check_in">Fazer Check-in</string>
+    <string name ="check_in_success">""Check-in Realizado com sucesso!"</string>
+
+</resources>
