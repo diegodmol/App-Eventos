@@ -11,4 +11,4 @@
 
 
 
-# Priorizei mais a parte de arquitetura e de boas práticas a parte de Layout e Testes(não implementei), não consegui realizar devido a outros compromissos e de alguns imprevisto que ocorreram.
+# Priorizei mais a parte de arquitetura e de boas práticas(Evitar o máximo Hard-Coded(Criação de dimens,Extensões) a parte de Layout e Testes(não implementei), não consegui realizar devido a outros compromissos e de alguns imprevisto que ocorreram.
