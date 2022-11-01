@@ -42,26 +42,48 @@
         tools:text="20/08/2018" />
 
     <TextView
-        android:id="@+id/itemPrice"
+        android:id="@+id/txtPrice"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/btnCheckIn"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf=""
+        app:layout_constraintEnd_toStartOf="@id/itemPrice"
         app:layout_constraintTop_toBottomOf="@+id/itemDate"
-        tools:text="R$59.99" />
+        tools:text="Preço:" />
 
-
-    <Button
-        android:id="@+id/btnCheckIn"
+    <TextView
+        android:id="@+id/itemPrice"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/itemDate"
+        app:layout_constraintStart_toEndOf="@id/txtPrice"
+        tools:text="R$59.99" />
+
+    <Button
+        android:id="@+id/btnCheckIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/check_in"
         android:textAllCaps="false"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnShare"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/share"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCheckIn"
+        app:layout_constraintTop_toTopOf="@id/btnCheckIn" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
