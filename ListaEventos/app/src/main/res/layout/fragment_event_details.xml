@@ -48,9 +48,9 @@
         android:layout_marginTop="@dimen/margin_medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/btnCheckIn"
-        app:layout_constraintTop_toTopOf=""
         app:layout_constraintEnd_toStartOf="@id/itemPrice"
         app:layout_constraintTop_toBottomOf="@+id/itemDate"
+        app:layout_constraintTop_toTopOf=""
         tools:text="Preço:" />
 
     <TextView
@@ -59,8 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/itemDate"
         app:layout_constraintStart_toEndOf="@id/txtPrice"
+        app:layout_constraintTop_toBottomOf="@+id/itemDate"
         tools:text="R$59.99" />
 
     <Button
@@ -69,11 +69,10 @@
         android:layout_height="wrap_content"
         android:text="@string/check_in"
         android:textAllCaps="false"
-        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnShare"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <Button
         android:id="@+id/btnShare"
