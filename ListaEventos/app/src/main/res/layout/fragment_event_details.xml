@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
     android:padding="@dimen/margin_small">
 
     <TextView
@@ -12,6 +14,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-smallcaps"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_title"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,71 +22,31 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Hackaton Social Woop Sciredi" />
 
-    <ImageView
-        android:id="@+id/itemImage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="5:2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/itemTitle"
-        tools:src="@drawable/ic_image_event" />
-
     <TextView
         android:id="@+id/itemDate"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
         android:fontFamily="sans-serif-smallcaps"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_subtitle"
         android:textStyle="italic"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemTitle"
         tools:text="20/08/2018" />
 
     <TextView
-        android:id="@+id/txtPrice"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/btnCheckIn"
-        app:layout_constraintEnd_toStartOf="@id/itemPrice"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemDate"
-        android:text="@string/price"
-        tools:text="Preço:" />
-
-    <TextView
-        android:id="@+id/itemPrice"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/txtPrice"
-        app:layout_constraintTop_toBottomOf="@+id/itemDate"
-        tools:text="R$59.99" />
-
-    <Button
-        android:id="@+id/btnCheckIn"
+        android:id="@+id/itemDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/check_in"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btnShare"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnShare"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/share"
-        android:textAllCaps="false"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btnCheckIn"
-        app:layout_constraintTop_toTopOf="@id/btnCheckIn" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDate"
+        tools:text="Uma maratona de programação, na qual estudantes e profissionais das áreas de DESIGN, PROGRAMAÇÃO e MARKETING se reunirão para criar projetos com impacto social positivo através dos pilares de Educação Financeira e Colaborar para Transformar.\n\nO evento será realizado por duas empresas que são movidas pela transformação: o Woop Sicredi e a Smile Flame.\n\n// Pra ficar esperto:\n\n- 31/08, 01 e 02 de Setembro, na PUCRS;\n- 34 horas de duração;\n- Atividades direcionadas para criação de soluções digitais de impacto social;\n- Mentorias para apoiar o desenvolvimento das soluções;\n- Conteúdo de apoio; \n- Alimentação inclusa;\n\n// Programação\n\nSexta-feira - 31/08 - 19h ás 22h\nSábado e Domingo - 01 e 02/09 - 9h do dia 01/09 até as 18h do dia 02/09.\n\n// Realização\nWoop Sicredi\nSmile Flame\n\nMaiores infos em: https://www.hackathonsocial.com.br/\nTá com dúvida? Manda um e-mail pra gabriel@smileflame.com\n\nEaí, ta tão animado quanto nós? Let´s hack!" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

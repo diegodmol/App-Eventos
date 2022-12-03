@@ -2,82 +2,62 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_drawable"
-    android:padding="@dimen/margin_small">
-
-    <TextView
-        android:id="@+id/itemTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textAlignment="center"
-        android:textSize="@dimen/text_title"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/itemImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Hackaton Social Woop Sciredi" />
+    android:background="@drawable/bg_drawable">
 
 
     <ImageView
         android:id="@+id/itemImage"
-        android:layout_width="340dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toTopOf="@id/itemDate"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintDimensionRatio="4:2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/itemTitle"
+        app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_image_event" />
 
-
     <TextView
-        android:id="@+id/itemDate"
+        android:id="@+id/txtInformation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="@dimen/text_subtitle"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@id/itemDescription"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemImage"
-        tools:text="20/08/2018" />
-
-    <TextView
-        android:id="@+id/itemDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btnShowDetails"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/itemDate"
-        tools:text="Uma maratona de programação, na qual estudantes e profissionais das áreas de DESIGN, PROGRAMAÇÃO e MARKETING se reunirão para criar projetos com impacto social positivo através dos pilares de Educação Financeira e Colaborar para Transformar.\n\nO evento será realizado por duas empresas que são movidas pela transformação: o Woop Sicredi e a Smile Flame.\n\n// Pra ficar esperto:\n\n- 31/08, 01 e 02 de Setembro, na PUCRS;\n- 34 horas de duração;\n- Atividades direcionadas para criação de soluções digitais de impacto social;\n- Mentorias para apoiar o desenvolvimento das soluções;\n- Conteúdo de apoio; \n- Alimentação inclusa;\n\n// Programação\n\nSexta-feira - 31/08 - 19h ás 22h\nSábado e Domingo - 01 e 02/09 - 9h do dia 01/09 até as 18h do dia 02/09.\n\n// Realização\nWoop Sicredi\nSmile Flame\n\nMaiores infos em: https://www.hackathonsocial.com.br/\nTá com dúvida? Manda um e-mail pra gabriel@smileflame.com\n\nEaí, ta tão animado quanto nós? Let´s hack!" />
+        app:layout_constraintTop_toBottomOf="@id/itemImage"
+        tools:text="Uma simples e perfeitamente extraída dose de espresso misturado com leite fresco e chocolate fazem esta bebida deliciosa." />
 
 
-    <Button
-        android:id="@+id/btnShowDetails"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:text="@string/show_details_event"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/imgShare"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/txtInformation"
+        app:layout_constraintEnd_toEndOf="@id/txtInformation"
+        android:src="@drawable/ic_share" />
 
+    <ImageView
+        android:id="@+id/imgFavorite"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/txtInformation"
+        app:layout_constraintEnd_toStartOf="@id/imgShare"
+        android:src="@drawable/ic_favorite" />
 
-<!--    <View-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="2dp"-->
-<!--        android:background="@color/blue_baby"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/btnShowDetails" />-->
+    <ImageView
+        android:id="@+id/imgFavoriteLike"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/txtInformation"
+        app:layout_constraintEnd_toStartOf="@id/imgShare"
+        android:visibility="gone"
+        android:src="@drawable/ic_favorite_like" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

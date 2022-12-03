@@ -3,12 +3,12 @@ package com.example.listaeventos.view.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.listaeventos.view.EventsViewHolder
 import com.example.listaeventos.databinding.FragmentEventsListBinding
+import com.example.listaeventos.view.EventsViewHolder
 import com.example.listaeventos.service.listener.EventListener
 import com.example.listaeventos.service.model.EventsModel
 
-class EventsAdapter(list: List<EventsModel>) : RecyclerView.Adapter<EventsViewHolder>() {
+class EventsAdapter(list: List<EventsModel>,) : RecyclerView.Adapter<EventsViewHolder>() {
 
     private var listEvents = list
     private lateinit var listener: EventListener

@@ -21,7 +21,6 @@ class EventsViewModel(application: Application) : AndroidViewModel(application) 
     private val _failure = MutableLiveData<String>()
     val failure: LiveData<String> = _failure
 
-
     fun getEvents() {
         eventsRepository.getEvents(object : APIResponse<List<EventsModel>> {
             override fun onSuccess(result: List<EventsModel>) {

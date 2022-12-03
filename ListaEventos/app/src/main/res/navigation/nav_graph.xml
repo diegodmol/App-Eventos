@@ -9,7 +9,7 @@
         android:id="@+id/EventsFragment"
         android:name="com.example.listaeventos.view.fragments.EventsFragment"
         android:label="@string/fragment_events_label"
-        tools:layout="@layout/fragment_events">
+        tools:layout="@layout/fragment_events_list">
 
         <action
             android:id="@+id/action_EventsFragment_to_EventDetailsFragment"
